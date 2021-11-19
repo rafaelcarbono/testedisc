@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    text-align: center;
+}
+.option{
+    padding: 20px;
+    margin: 5px;
+    background-color: antiquewhite;
+}
+.hidden{
+    display: none;
+}
