@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Teste Vocacional Disc</title>
         <meta charset="UTF-8">
+        <title>Teste Vocacional Disc</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="assets/style/main.css" rel="stylesheet">
     </head>
@@ -12,10 +12,10 @@
         <main>
             <section class="container">
 
-            <form id="q1" class="question">
+            <form id="q1" class="question hidden">
                 <div class="option">
                     <input type="radio" id="qo1" name="qo1" value="option1">
-                    <label for="qo1">Opção 1</label>
+                    <label for="qo1">aOpção 1</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="qo2" name="qo2" value="option2">
@@ -34,7 +34,7 @@
             <form id="q2" class="question hidden">
                 <div class="option">
                     <input type="radio" id="qo5" name="qo5" value="option1">
-                    <label for="qo5">Opção 1</label>
+                    <label for="qo5">bOpção 1</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="qo6" name="qo6" value="option2">
@@ -50,7 +50,47 @@
                 </div>
             </form>
 
-            <div class="contagem"><p>A contagem atual é: <span id="count"></span></p></div>
+            <form id="q3" class="question hidden">
+                <div class="option">
+                    <input type="radio" id="qo9" name="qo9" value="option1">
+                    <label for="qo9">cOpção 1</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="qo10" name="qo10" value="option2">
+                    <label for="qo10">Opção 2</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="qo11" name="qo11" value="option3">
+                    <label for="qo11">Opção 3</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="qo12" name="qo12" value="option4">
+                    <label for="qo12">Opção 4</label>
+                </div>
+            </form>
+
+            <form id="q4" class="question hidden">
+                <div class="option">
+                    <input type="radio" id="qo13" name="qo13" value="option1">
+                    <label for="qo13">dOpção 1</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="qo14" name="qo14" value="option2">
+                    <label for="qo14">Opção 2</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="qo15" name="qo15" value="option3">
+                    <label for="qo15">Opção 3</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="qo16" name="qo16" value="option4">
+                    <label for="qo16">Opção 4</label>
+                </div>
+            </form>
+
+            <div id="iniciar" class="iniciar">Iniciar</div>
+            <div id="trocar" class="hidden">Escolher</div>
+            <div class="count" id="count"></div>
         </section>
         </main>
 

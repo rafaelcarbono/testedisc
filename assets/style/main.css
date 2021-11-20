@@ -14,12 +14,36 @@ main{
 }
 .container{
     text-align: center;
+    width: 40%;
 }
 .option{
     padding: 20px;
     margin: 5px;
     background-color: antiquewhite;
 }
-.hidden{
+.hidden, .escondido{
     display: none;
+}
+.iniciar{
+    width: 100%;
+    height: 50px;
+    background-color: crimson;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        cursor: pointer;
+
+
+}
+.trocar{
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    background-color: yellow;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
