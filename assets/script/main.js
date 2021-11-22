@@ -4,7 +4,6 @@ let answers = [];
 let options = [];
 let showq;
 let count = 0;
-let atual = 1;
 let trocar = document.getElementById("trocar");
 let iniciar = document.getElementById("iniciar");
 let contagem = document.getElementById("count");
@@ -19,12 +18,20 @@ while (question[count] != undefined) {
                 }count +=1;
         }
 }
-
+console.log(questions);
+console.log(options);
 function randomQ (min, max){
-    contagem.innerHTML = "Questão " + atual + " de 4";
+
+    if(questions.length > 1){
+        contagem.innerHTML = "Faltam " + questions.length + " questões.";
+
+    }else{
+        contagem.innerHTML = "Falta " + questions.length + " questão.";
+    }
     min = Math.ceil(0);
     max = Math.floor(questions.length);
     showq = Math.floor(Math.random() * (max - min)) + min;
+
 }
 
 function start(){
@@ -37,7 +44,6 @@ function start(){
 }
 
 function changeQuestion() {
-    atual++;
     questions[showq].classList.add("hidden");
         answers.push(questions[showq]);
         questions.splice(showq, 1);
@@ -52,6 +58,7 @@ function changeQuestion() {
             trocar.classList.add("hidden");
             contagem.innerHTML = "Acabou!!!";
     }
+
   }
  
 iniciar.onclick = () => {
