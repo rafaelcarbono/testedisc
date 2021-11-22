@@ -4,28 +4,47 @@
 }
 html, body{
     height: 100%;
+    background-color: black;
+    color: whitesmoke;
 }
 main{
-    height: 100%;
+    height: 80%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.questione{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    height: 500px;
+    justify-content: center;
+}
 .container{
-    text-align: center;
+    height: 500px;    
     width: 40%;
 }
+.question{
+    height: 100%;
+    
+}
+input{
+    margin: 0 50px;
+}
 .option{
-    padding: 20px;
-    margin: 5px;
-    background-color: antiquewhite;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin: 5% 0;
+
 }
 .hidden, .escondido{
     display: none;
 }
 .iniciar{
-    width: 100%;
+    width: 50%;
     height: 50px;
     background-color: crimson;
     color: whitesmoke;
@@ -37,7 +56,7 @@ main{
 
 }
 .trocar{
-    width: 100%;
+    width: 25%;
     height: 50px;
     margin-top: 5px;
     background-color: yellow;
