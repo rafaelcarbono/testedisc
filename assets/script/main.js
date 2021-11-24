@@ -3,9 +3,8 @@ let questions = [];
 let answers = [];
 let showq;
 let count = 0;
-let trocar = document.getElementById("trocar");
-let iniciar = document.getElementById("iniciar");
-let contagem = document.getElementById("count");
+let choice = null;
+let nameChoice = null;
 
 class CreatePerfil {
 
@@ -16,7 +15,6 @@ class CreatePerfil {
         this.description = description;
 
         this.valor = valor;
-
     }
 }
 
@@ -38,31 +36,23 @@ while (questionList[count] != undefined) {
 
 function randomQ (min, max){
 
-    if(questions.length > 1){
-        contagem.innerHTML = "Faltam " + questions.length + " questões.";
-
-    }else{
-        contagem.innerHTML = "Falta " + questions.length + " questão.";
+    while (question[count] != undefined) {
+        questions.push(question[count]);
+          count +=1;  
     }
     min = Math.ceil(0);
     max = Math.floor(questions.length);
     showq = Math.floor(Math.random() * (max - min)) + min;
-
 }
 
 function start(){
     randomQ();
     questions[showq].classList.remove("hidden");
-    iniciar.classList.remove("iniciar");
-    iniciar.classList.add("hidden");
-    trocar.classList.remove("hidden");
-    trocar.classList.add("trocar");
 }
 
 function addPerfil(){
-    let nameChoice = questions[showq].id;
-    let choice = questions[showq].querySelector('input[name='+ nameChoice + ']:checked');
-
+    nameChoice = questions[showq].id;
+    choice = questions[showq].querySelector('input[name='+ nameChoice + ']:checked').value;
 
     perfil1.valor+=1;
     perfil2.valor+=1;
@@ -137,3 +127,33 @@ function change() {
         changeQuestion();
     };
 }
+
+        if(questions.length != 0){
+            questions[showq].classList.remove("hidden");
+
+        }else{
+            if(perfil1.valor > Math.max(perfil2.valor,perfil3.valor,perfil4.valor)){
+                console.log("Você tem o Perfil " + perfil1.name);
+            }else if(perfil2.valor > Math.max(perfil1.valor,perfil3.valor,perfil4.valor)){
+                console.log("Você tem o Perfil " + perfil2.name);
+            }else if(perfil3.valor > Math.max(perfil1.valor,perfil2.valor,perfil4.valor)){
+                console.log("Você tem o Perfil " + perfil3.name);
+            }else if(perfil4.valor > Math.max(perfil1.valor,perfil2.valor,perfil3.valor)){
+                console.log("Você tem o Perfil " + perfil4.name);
+        console.log("finish");
+    }
+        }
+
+        }
+
+
+iniciar.onclick = () => {
+    start();
+}
+
+
+area.onclick = () => {
+    changeQuestion();
+
+}
+

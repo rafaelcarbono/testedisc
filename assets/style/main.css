@@ -43,26 +43,3 @@ input{
 .hidden, .escondido{
     display: none;
 }
-.iniciar{
-    width: 50%;
-    height: 50px;
-    background-color: crimson;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-        cursor: pointer;
-
-
-}
-.trocar{
-    width: 25%;
-    height: 50px;
-    margin-top: 5px;
-    background-color: yellow;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
