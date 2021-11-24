@@ -96,3 +96,62 @@ main{
     display: none;
 }
 
+@media (max-width: 600px) {
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .call{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+
+    }
+    .call h1{
+        font-size: 1.5rem;
+    }
+
+    .quiz{
+        width: 100%;
+        height: 70%;
+    }
+
+    .question{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .option{
+        height: 25%;
+
+    }
+    .option label{
+        height: 100%;
+        width: 100%;
+        font-size: larger;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .hidden{
+        display: none;
+    }
+
+  }
